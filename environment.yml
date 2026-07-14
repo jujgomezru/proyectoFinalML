@@ -1,0 +1,40 @@
+name: amr-ml
+# Entorno de desarrollo para el proyecto de predicción de resistencia
+# antimicrobiana (clasificación resistente / sensible).
+#
+# Crear el entorno:   conda env create -f environment.yml
+# Activarlo:          conda activate amr-ml
+# Actualizarlo:       conda env update -f environment.yml --prune
+
+channels:
+  - conda-forge      # el orden importa: conda-forge primero
+  - bioconda
+
+dependencies:
+  # --- Base de Python ---
+  - python=3.11
+  - pip
+
+  # --- Manipulación de datos y machine learning (núcleo de la Fase 1) ---
+  - pandas                 # tablas de datos (DataFrames)
+  - numpy                  # cálculo numérico
+  - scikit-learn           # modelos de ML, particiones, métricas, validación cruzada
+  - xgboost                # gradient boosting (suele rendir muy bien en estos datos)
+  - imbalanced-learn       # técnicas para el desbalance de clases (resistente vs sensible)
+
+  # --- Visualización y exploración ---
+  - matplotlib
+  - seaborn
+  - jupyterlab             # cuadernos interactivos para experimentar
+
+  # --- Bioinformática ---
+  - biopython              # leer/escribir FASTA y manejar secuencias
+
+  # --- Se usan más adelante (generación de features y baseline).
+  #     Puedes dejarlos instalados desde ya para no reconstruir el entorno. ---
+  - rgi                    # detección de genes de resistencia con CARD (baseline / features)
+  - kmc                    # conteo de k-mers (features "reference-free"), para más adelante
+
+  # --- Paquetes disponibles solo vía pip ---
+  - pip:
+      - bacdive            # cliente oficial de la API de BacDive (requiere registro gratuito)

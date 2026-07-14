@@ -1,0 +1,67 @@
+# ============================================================
+#  Datos  ->  NUNCA se versionan (son enormes y/o regenerables)
+# ============================================================
+data/
+raw/
+processed/
+*.fasta
+*.fa
+*.fastq
+*.fq
+*.gz
+*.zip
+*.bam
+*.sam
+*.vcf
+# Si algún día necesitas versionar un archivo pequeño de data/,
+# puedes forzarlo con una excepción, por ejemplo:  !data/ejemplo_mini.csv
+
+# ============================================================
+#  Credenciales y secretos  ->  jamás en el repositorio
+# ============================================================
+.env
+*.key
+*.pem
+credentials*
+secrets*
+
+# ============================================================
+#  Python
+# ============================================================
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+
+# ============================================================
+#  Jupyter
+# ============================================================
+.ipynb_checkpoints/
+
+# ============================================================
+#  Entornos virtuales / conda
+#  (el entorno vive fuera del repo; solo versionamos environment.yml)
+# ============================================================
+.venv/
+venv/
+env/
+envs/
+
+# ============================================================
+#  Modelos y artefactos de ML  (regenerables, suelen ser pesados)
+# ============================================================
+*.pkl
+*.joblib
+*.h5
+models/
+mlruns/
+
+# ============================================================
+#  Editores y sistema operativo
+# ============================================================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
