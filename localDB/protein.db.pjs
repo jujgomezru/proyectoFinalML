@@ -1,0 +1,22 @@
+{
+  "version": "1.2",
+  "dbname": "protein.db",
+  "dbtype": "Protein",
+  "db-version": 5,
+  "description": "/home/jujgomezru/unal/aprendizajeDeMaquina/proyectoFinalML/localDB/proteindb.fsa",
+  "number-of-letters": 2069096,
+  "number-of-sequences": 6284,
+  "last-updated": "2026-07-14T18:05:00",
+  "number-of-volumes": 1,
+  "bytes-total": 3088733,
+  "bytes-to-cache": 2125821,
+  "files": [
+    "protein.db.pdb",
+    "protein.db.phr",
+    "protein.db.pin",
+    "protein.db.pot",
+    "protein.db.psq",
+    "protein.db.ptf",
+    "protein.db.pto"
+  ]
+}
