@@ -26,6 +26,7 @@ dependencies:
   - matplotlib
   - seaborn
   - jupyterlab             # cuadernos interactivos para experimentar
+  - pandoc                 # requerido por jupyter nbconvert para exportar notebooks (p. ej. a PDF/HTML)
 
   # --- Bioinformática ---
   - biopython              # leer/escribir FASTA y manejar secuencias
@@ -34,6 +35,13 @@ dependencies:
   #     Puedes dejarlos instalados desde ya para no reconstruir el entorno. ---
   - rgi                    # detección de genes de resistencia con CARD (baseline / features)
   - kmc                    # conteo de k-mers (features "reference-free"), para más adelante
+
+  # --- Pipeline metagenómico (02/03_pipeline_*.ipynb) ---
+  - fastp                  # control de calidad y recorte de adaptadores
+  - seqtk                  # submuestreo reproducible de lecturas
+  - megahit                # ensamblado metagenómico
+  - prodigal               # predicción de genes en los contigs ensamblados
+  - wget                   # descarga de la base CARD
 
   # --- Paquetes disponibles solo vía pip ---
   - pip:

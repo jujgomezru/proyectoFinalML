@@ -1,0 +1,100 @@
+\documentclass[journal]{vgtc}                     % versión final (estilo journal)
+%\documentclass[journal,hideappendix]{vgtc}        % final (journal) sin apéndices
+%\documentclass[review,journal]{vgtc}              % revisión (journal)
+%\documentclass[review,journal,hideappendix]{vgtc} % revisión (journal) sin apéndices
+%\documentclass[widereview]{vgtc}                  % revisión con espaciado amplio
+%\documentclass[preprint,journal]{vgtc}            % preprint (journal)
+
+%% Descomentar la línea correspondiente a la etapa del artículo en el proceso.
+
+\onlineid{0}
+
+\vgtccategory{Research}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% CARGA DE PAQUETES %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\graphicspath{{figs/}{figures/}{pictures/}{images/}{./}}
+
+\usepackage{booktabs}
+\usepackage[spanish]{babel}
+\usepackage{mathptmx}                  % fuente Times consistente para matemáticas
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%% TÍTULO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{% TODO: título del artículo
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%% AUTOR(ES) %%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Usar \authororcid{Nombre}{0000-0000-0000-0000} por cada autor (ID de 16 dígitos,
+%% registrable en https://orcid.org/).
+\author{%
+  % TODO: autor(es), p. ej. \authororcid{Nombre Apellido}{0000-0000-0000-0000}
+}
+
+\authorfooter{
+  %% un \item por autor o grupo de autores de la misma institución; terminar cada uno en punto.
+  % \item
+  %     Nombre Apellido está en Institución.
+  %     E-mail: correo@dominio.com
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%% RESUMEN %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\abstract{%
+  % TODO: resumen del artículo.
+}
+
+%% Palabras clave (aparecen como 'Index Terms'); primera letra en mayúscula, separadas por comas.
+\keywords{% TODO: palabras clave
+}
+
+%% El espacio de copyright está habilitado por defecto según las normas.
+%\nocopyrightspace
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% INICIO DEL ARTÍCULO %%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% \maketitle debe ser el primer comando tras \begin{document},
+%% salvo por la excepción de \firstsection.
+\firstsection{Introducción}
+
+\maketitle
+
+% TODO: introducción -- contexto, problema, objetivos y aportes del trabajo.
+
+
+\section{Metodología}
+
+% TODO: metodología -- datos, diseño experimental, herramientas y procedimiento.
+
+
+\section{Resultados}
+
+% TODO: resultados -- hallazgos, figuras y tablas de apoyo.
+
+
+\section{Conclusiones}
+
+% TODO: conclusiones -- síntesis de hallazgos, limitaciones y trabajo futuro.
+
+
+\bibliographystyle{abbrv-doi-hyperref}
+%\bibliographystyle{abbrv-doi-hyperref-narrow}
+%\bibliographystyle{abbrv-doi}
+%\bibliographystyle{abbrv-doi-narrow}
+
+\bibliography{template}
+
+\end{document}
