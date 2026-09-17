@@ -17,6 +17,7 @@ dependencies:
 
   # --- Manipulación de datos y machine learning (núcleo de la Fase 1) ---
   - pandas                 # tablas de datos (DataFrames)
+  - openpyxl                # motor de pandas para leer/escribir .xlsx (muestreo_PAIRED_89.xlsx)
   - numpy                  # cálculo numérico
   - scikit-learn           # modelos de ML, particiones, métricas, validación cruzada
   - xgboost                # gradient boosting (suele rendir muy bien en estos datos)
@@ -30,6 +31,9 @@ dependencies:
 
   # --- Bioinformática ---
   - biopython              # leer/escribir FASTA y manejar secuencias
+  - ncbi-amrfinderplus     # deteccion de ARG con NCBI AMRFinderPlus, en paralelo a CARD/RGI
+  - blast                  # blastn/update_blastdb.pl LOCAL (04_pipeline_organizado.ipynb, solo HPC:
+                            # requiere la base nt completa de NCBI descargada -- cientos de GB)
 
   # --- Se usan más adelante (generación de features y baseline).
   #     Puedes dejarlos instalados desde ya para no reconstruir el entorno. ---
@@ -37,6 +41,8 @@ dependencies:
   - kmc                    # conteo de k-mers (features "reference-free"), para más adelante
 
   # --- Pipeline metagenómico (02/03_pipeline_*.ipynb) ---
+  - aria2                  # descarga de FASTQ (ENA), multi-conexión, con resume y reintento
+  - pigz                   # descompresion gzip multi-hilo (benchmark de la seccion 1.3b)
   - fastp                  # control de calidad y recorte de adaptadores
   - seqtk                  # submuestreo reproducible de lecturas
   - megahit                # ensamblado metagenómico
