@@ -21,7 +21,9 @@ processed/
 # ensure_amrfinderplus_db() en 02_estimacion_recursos.ipynb) -- a diferencia de
 # localDB/card.json (ya versionado, 42MB), esta base es mucho más pesada y no
 # tiene sentido cargarla al repo pudiendo regenerarse con un comando.
-localDB/amrfinderplus/
+localDB/
+card.json
+card_data.tar.bz2
 
 # ============================================================
 #  Credenciales y secretos  ->  jamás en el repositorio
